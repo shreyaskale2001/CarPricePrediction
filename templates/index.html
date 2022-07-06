@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Price Predictor</title>
+	<link rel="stylesheet" type="text/css" href="static/CSS/style.css">
+</head>
+
+
+
+<body>
+<div class="main">
+<div class="register">
+<h2>Car Price Predictor</h2>
+    <form id="register" method="post", action="#">
+       	<label for="name">companies:</label>
+       	<br>
+		<select class ="selectpicker from-control" required = "1" id="company" name="company" onchange="load_car_model(this.value, 'car_models') ">
+		{% for company in companies %}
+<!--       	<input type="text" name="Name" id="name" placeholder="Enter your name">-->
+			<option value="{{company}}">
+				{{company}}
+			</option>
+		{% endfor %}
+			</select>
+		<br><br>
+       	<label for="name">car_models:</label>
+       	<br>
+<!--       	<input type="text" name="lName" id="name" placeholder="Enter your Last name">-->
+       	<select class ="selectpicker from-control" id="car_models" name="car_models" required = "1">
+			<option value="">
+				select
+			</option>
+<!--		{% for model in car_models %}-->
+<!--&lt;!&ndash;&lt;!&ndash;       	<input type="text" name="Name" id="name" placeholder="Enter your name">&ndash;&gt;&ndash;&gt;-->
+<!--			<option value="{{model}}">-->
+<!--				{{model}}-->
+<!--			</option>-->
+<!--		{% endfor %}-->
+			</select>
+		<br><br>
+       	<label for="name">fuel_type:</label>
+       	<br>
+<!--       	<input type="number" name="age" id="name" placeholder="How old are you">-->
+       	<select name="fuel_type">
+<!--       	<input type="text" name="Name" id="name" placeholder="Enter your name">-->
+			<option value="petrol">
+				petrol
+			</option>
+			<option value="diesel">
+				diesel
+			</option>
+			</select><br><br>
+		<label for="name">kms_driven:</label>
+       	<br>
+<!--       	<input type="number" name="age" id="name" placeholder="How old are you">-->
+       	<select name="kms_driven">
+		{% for i in kms_driven %}
+<!--       	<input type="text" name="Name" id="name" placeholder="Enter your name">-->
+			<option value="{{i}}">
+				{{i}}
+			</option>
+		{% endfor %}
+			</select><br><br>
+       	<label>Year</label>
+       	<br>
+<!--       	<input type="text" name="email" id="name" placeholder="Enter your email id">-->
+       	<select name="year">
+		{% for i in year %}
+<!--       	<input type="text" name="Name" id="name" placeholder="Enter your name">-->
+			<option value="{{i}}">
+				{{i}}
+			</option>
+		{% endfor %}
+			</select>
+		<br><br>
+
+       	<input type="Submit" name="Submit" id="Submit" >
+    </form>
+</div>
+</div>
+
+<script>
+	function load_car_model(value,car_models_id){
+<!--	    var company = document.getElementById(id);-->
+	    var car_models = document.getElementById(car_models_id);
+	    car_models.value = "";
+	    car_models.innerHTML="";
+	    {% for company in companies %}
+	      if(value == "{{company}}"){
+	        {% for model in car_models %}
+	           {% if company in model %}
+
+	              var newOption = document.createElement("option");
+
+	              newOption.value = "{{model}}";
+	              newOption.innerHTML="{{model}}";
+	              console.log(newOption)
+	              car_models.append(newOption);
+	           {% endif %}
+	        {% endfor %}
+	      }
+	    {% endfor %}
+	}
+</script>
+</body>
+</html>
