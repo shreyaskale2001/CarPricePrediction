@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, url_for
 import pandas as pd
 import csv
-import joblib
 import pickle
 import numpy as np
 
@@ -28,6 +27,8 @@ def index():
     year = sorted(year1, reverse = True)
     kms_driven = sorted(driven)
     return render_template('index.html', companies = companies, car_models=car_models, year = year, kms_driven = kms_driven)
+
+
 
 @app.route("/pred", methods = ['GET', 'POST'])
 def pred():
