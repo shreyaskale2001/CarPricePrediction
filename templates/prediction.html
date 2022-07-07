@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Car Price Predictor</title>
+	<title>Predictor</title>
 	<link rel="stylesheet" type="text/css" href="static/CSS/style.css">
 </head>
 
@@ -10,8 +10,25 @@
 <div class="main">
 <div class="register">
 <h2>Car Price Predictor</h2>
-	<h1>Predicted Price(Rs) : {{value}}</h1>
+<!--	<h1>Predicted Price(Rs) : {{value}}</h1>-->
+
+
+<form id="register">
+
+
+       	<label for="name">Prediction:</label>
+       	<br>
+		<h3>
+
+			<option value="{{value}}">
+				{{value}}
+			</option>
+
+		</h3>
+		<br><br>
+</form>
 </div>
 </div>
+
 </body>
 </html>
