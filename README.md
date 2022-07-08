@@ -1,17 +1,17 @@
 # CarPricePrediction
 This is based on Machine Learning model
 
-This is a simple machine learning project which predicts the Price of car using model built with the linear Regression Algorithm. This project aims to apply various Python tools to clean the data, and various liblary to analysis. 
+This is a simple machine learning project which predicts the Price of car using model built with the linear Regression Algorithm. This project aims to apply various Python tools to clean the data, and various library to analysis. 
 
-#Requirement
+# Requirement
 ##### Softwares used
 ```
-- Pycharm
+-  Pycharm Community Edition
 - Jupyter Notebook
 ```
 
 
-#####Programming languages used
+##### Programming languages used
 ```
 - HTML
 - CSS
@@ -23,12 +23,10 @@ This is a simple machine learning project which predicts the Price of car using 
 - numpy
 - pandas
 - scikit-learn
-- Pickel
-- Flask
+- pickel
+- flask
 ```
-# How this project does?
-First of all the data was scraped from Quikr.com (https://quikr.com).
-
+# How was this project done?
 The data was cleaned and analysed.
 
 Then a Linear Regression model was built on top of it which had 0.92 R2_score.
