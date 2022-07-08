@@ -36,4 +36,7 @@ Then a Linear Regression model was built on top of it which had 0.92 R2_score.
 This project was given the form of an website built on Flask where we used the Linear Regression model to perform predictions.
 
 # Screenshots
-![screenshot1](https://github.com/shreyaskale2001/Todo-Website/blob/master/Screenshot.png "screenshot")
+![screenshot1](https://github.com/shreyaskale2001/CarPricePrediction/blob/master/Screenshot%20(1).png)
+![screenshot1](https://github.com/shreyaskale2001/CarPricePrediction/blob/master/Screenshot%20(2).png)
+
+
